@@ -1,12 +1,17 @@
-import fastify from "fastify";
+import Fastify from "fastify";
 import logger from "./logger";
+import pokemonRoutes from "../modules/pokemon/pokemon.routes";
+import indexRouteOptions from "./index.route";
 
 async function buildServer() {
-  const app = fastify({
+  const fastify = Fastify({
     logger,
   });
 
-  return app;
+  //routes
+  fastify.get("/", indexRouteOptions);
+  fastify.register(pokemonRoutes, { prefix: "/pokemon" });
+  return fastify;
 }
 
 export default buildServer;
