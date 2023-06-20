@@ -1,6 +1,5 @@
+import logger from "./utils/logger";
 import buildServer from "./utils/server";
-
-console.log("hey hey hey");
 
 async function main() {
   const app = await buildServer();
@@ -8,7 +7,7 @@ async function main() {
   app.listen({
     port: 3000,
   });
-  console.log("Server is running on port 3000");
+  logger.info("Server is running on port 3000");
 }
 
 main();
