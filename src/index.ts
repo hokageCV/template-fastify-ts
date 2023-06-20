@@ -3,7 +3,7 @@ dotenv.config();
 
 import logger from "./utils/logger";
 import buildServer from "./utils/server";
-import ENV from "./config/env";
+import ENV from "./utils/env";
 
 const PORT = parseInt(ENV.PORT, 10) || 3000;
 
