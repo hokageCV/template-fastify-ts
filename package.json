@@ -12,7 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fastify/one-line-logger": "^1.2.0",
     "axios": "^1.4.0",
     "dotenv": "^16.3.1",
     "fastify": "^4.18.0",
